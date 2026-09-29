@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "FocusFlow",
+    "slug": "focusflow-cpd",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F7FB",
+    "web": { "name": "FocusFlow" },
+    "ios": { "supportsTablet": true },
+    "android": { "package": "com.krishnavora.focusflow" }
+  }
+}
