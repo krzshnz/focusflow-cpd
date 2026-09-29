@@ -1,63 +1,44 @@
 # FocusFlow
 
-A small cross-platform task manager built for the Cross Platform Development (CPD) Tiny Project. One Expo/React Native codebase runs on Android, iOS and the web.
+A cross-platform task manager for the CPD Tiny Project. One Expo and React Native codebase runs on Android, iOS and web.
 
 ## Features
 
-- Dashboard with total, pending, completed, due-today and overdue counts
+- Dashboard for total, pending, completed, due-today and overdue tasks
 - Create, edit, complete and delete tasks
-- Search and filter tasks by status, category and priority
-- Optional due dates, notes and priorities
-- Local persistence with AsyncStorage; no account or backend needed
-- Empty states and input validation
+- Search and filter by status, category and priority
+- Optional notes and due dates, with input validation
+- Local task storage with AsyncStorage; no account or backend
 
 ## Requirements
 
-- Node.js 20.19+ and npm
-- Expo Go for phone testing, or a modern browser for web testing
+Node.js 20.19 or newer, npm, and Expo Go for phone testing or a modern web browser.
 
 ## Run
 
-```bash
-npm install
-npm run start
-```
+1. Run `npm install` in the project directory.
+2. Run `npm run start`.
+3. Scan the QR code with Expo Go, or press `w` to open the web app.
+4. Run `npm run typecheck` to check the TypeScript source.
 
-Scan the QR code with Expo Go. For a browser, press `w` in the Expo terminal or run `npm run web`. Android and iOS emulator shortcuts are available through Expo when configured.
+## Demo
 
-## Demo walkthrough
+Create a task with a title, category, priority and due date. Search and filter it on the Tasks screen, edit it, mark it complete, and confirm that dashboard counts change. Relaunch the app to demonstrate local persistence.
 
-1. Open **Home** and review the initial empty dashboard.
-2. Tap **New task**. Add a title, category, priority, notes and an optional date in `YYYY-MM-DD` format.
-3. Open **Tasks**. Search, filter, edit, mark complete and delete the task.
-4. Return to **Home** to see the counts update. Relaunch the app to show local persistence.
+## Project files
 
-## Structure
-
-```text
-focusflow/
-  App.tsx             Screens and UI components
-  src/tasks.ts        Task model, validation and statistics
-  src/storage.ts      AsyncStorage persistence
-  app.json            Expo configuration
-  package.json        Dependencies and scripts
-  README.md           Setup and demo guide
-```
-
-## Data flow
-
-User action -> React state -> AsyncStorage -> restored state at launch. All data stays on the current device/browser. No network connection is required after dependencies are installed.
-
-## Verification
-
-Run `npm run typecheck`. Manually test the demo walkthrough on your target device. The project report lists detailed test cases. Actual device screenshots can be added to `assets/` after running the app.
+- `App.tsx`: screens, task cards, forms and navigation
+- `src/tasks.ts`: task model, date validation and statistics
+- `src/storage.ts`: AsyncStorage read and write
+- `app.json`: Expo settings
+- `package.json` and `package-lock.json`: dependencies and scripts
 
 ## GitHub submission
 
-Create a public repository, upload the entire `focusflow` folder contents (excluding ignored generated files), and confirm the repository can be opened while logged out. Add the accompanying PDF report to the repository or submission form as requested by faculty. This package does not include a live repository URL or claim that it has been submitted.
+Source code: https://github.com/krzshnz/focusflow-cpd . The PDF project report is kept out of this repository. Submit it separately if faculty requests it.
 
 ## References
 
-- [Expo documentation](https://docs.expo.dev/)
-- [React Native documentation](https://reactnative.dev/docs/getting-started)
-- [AsyncStorage documentation](https://react-native-async-storage.github.io/async-storage/)
+- https://docs.expo.dev/
+- https://reactnative.dev/docs/getting-started
+- https://react-native-async-storage.github.io/async-storage/
